@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+  mysql8:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: "1234"
+      MYSQL_USER: "kim"
+      MYSQL_PASSWORD: "3456"
+      MYSQL_DATABASE: "myDB"
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - "53000:3306"
